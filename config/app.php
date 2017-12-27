@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
 
 
 
