@@ -23,3 +23,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('mail', 'MailController@getSend');
+Route::get('{provider}/redirect', 'Auth\loginController@redirectToProvider')->name('social.redirect');
+Route::get('{provider}/callback', 'Auth\loginController@handleProviderCallback')->name('social.callback');
