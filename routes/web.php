@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,10 +9,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Middleware\CheckAge;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('first', 'second');
+})->middleware(CheckAge::class);
 
 Route::get('/tracy', function () {
     throw new \Exception('Tracy works!');
